@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mihir Deshpande | Work</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            line-height: 1.6;
-            padding: 0 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .project {
-            margin-bottom: 40px;
-        }
-        a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Mihir Deshpande | Selected Work</title>
+
+<style>
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 40px auto;
+        line-height: 1.7;
+        padding: 0 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        color: #00aaff;
+    }
+
+    a {
+        color: #00aaff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .project {
+        margin-bottom: 50px;
+    }
+
+    .divider {
+        border-bottom: 1px solid #333;
+        margin: 30px 0;
+    }
+</style>
 </head>
+
 <body>
 
-<h1>Mihir Deshpande — Selected Work</h1>
+<h1>Selected AI & Systems Projects</h1>
+<p style="text-align:center;">Mihir Deshpande</p>
+
+<div class="divider"></div>
 
 <div class="project">
     <h2>1. UpLift21 — AI Prenatal Screening System</h2>
@@ -37,33 +59,72 @@
             github.com/mihirdeshus/UpLift21
         </a>
     </p>
-    <p><strong>What it is:</strong> An AI-assisted screening framework for early detection of Down syndrome, designed to run on a Raspberry Pi (edge device) with no cloud dependency.</p>
-    <p><strong>Problem:</strong> Early screening is expensive and inaccessible in low-resource settings.</p>
-    <p><strong>My contribution:</strong> Built the full ML pipeline using a gradient boosting ensemble on 7 clinical biomarkers, optimized for &lt;200ms inference, and designed for real-world usability in rural clinics.</p>
+
+    <p>
+        UpLift21 is an AI-assisted screening framework for early detection of Trisomy 21 (Down syndrome), designed explicitly for deployment in resource-constrained healthcare environments. Unlike conventional approaches that assume access to cloud infrastructure, high-end imaging systems, and trained specialists, this system is built to operate entirely on a sub-$50 Raspberry Pi connected to legacy ultrasound machines — with no internet and no on-site expertise required.
+    </p>
+
+    <p>
+        The problem it addresses is not just medical, but infrastructural: in many rural settings, early screening is effectively inaccessible because the existing pipeline depends on scarce human expertise and expensive, centralized systems. UpLift21 rethinks this pipeline from first principles.
+    </p>
+
+    <p>
+        I designed and implemented the system end-to-end, developing a gradient boosting ensemble trained on seven clinically relevant biomarkers (including NT, nasal bone, FHR, serum markers, maternal age, and CRL). The model is optimized for edge deployment, achieving &lt;200ms inference while maintaining a ROC-AUC of 0.979 at an approximate cost of $15 per screen. The central design constraint was usability — ensuring the system could be meaningfully operated by non-specialists in primary health centres without disrupting existing workflows.
+    </p>
+
+    <p>
+        The project originated in Prof. Manu Prakash’s Frugal Science course at Stanford and is currently in discussion for a $10,000 research grant. It was awarded 1st Place at TechSparks 2026 at Ashoka University.
+    </p>
 </div>
 
-<div class="project">
-    <h2>2. Accessibility Toolkit — Browser Extensions</h2>
-    <p><strong>GitHub:</strong></p>
-    <ul>
-        <li><a href="https://github.com/mihirdeshus/Color-Blindness-Filter" target="_blank">Color Blindness Filter</a></li>
-        <li><a href="https://github.com/mihirdeshus/Custom-Font-Change" target="_blank">Custom Font Changer</a></li>
-    </ul>
-    <p><strong>What it is:</strong> A suite of browser extensions for color correction and readability enhancement.</p>
-    <p><strong>Problem:</strong> Many websites are not accessible to users with visual impairments.</p>
-    <p><strong>My contribution:</strong> Built both extensions end-to-end using JavaScript and CSS filters, focusing on real-time transformations across arbitrary websites.</p>
-</div>
+<div class="divider"></div>
 
 <div class="project">
-    <h2>3. Kaelo — Blockchain Livestock Management</h2>
+    <h2>2. Kaelo — Blockchain Livestock Management</h2>
     <p><strong>GitHub:</strong> 
         <a href="https://github.com/ChumaniC/Kaelo" target="_blank">
             github.com/ChumaniC/Kaelo
         </a>
     </p>
-    <p><strong>What it is:</strong> A blockchain-based livestock tracking system built on Hedera.</p>
-    <p><strong>Problem:</strong> Lack of reliable livestock records reduces trust and compliance for farmers.</p>
-    <p><strong>My contribution:</strong> Worked on system design and front-end development, and helped integrate smart contract logic into a usable interface.</p>
+
+    <p>
+        Kaelo is a blockchain-based livestock management system designed to address a fundamental gap in agricultural infrastructure: the absence of reliable, verifiable records for small-scale livestock farmers. In many emerging markets, particularly within Local Support Model (LSM) groups in southern Africa, farmers lack tamper-proof documentation of animal health, vaccination history, and compliance.
+    </p>
+
+    <p>
+        Developed during the University of Zurich’s Deep Dive into Blockchain programme, Kaelo leverages Hedera-based smart contracts to create immutable, auditable livestock records across the lifecycle of an animal — including identification, veterinary interactions, and compliance.
+    </p>
+
+    <p>
+        My contribution spanned both system design and implementation. I structured the data model and built the complete front-end (HTML/CSS/JavaScript), creating interfaces for farmers, veterinarians, and administrators. The focus was on usability — ensuring the system could function intuitively in low-resource, real-world contexts.
+    </p>
+</div>
+
+<div class="divider"></div>
+
+<div class="project">
+    <h2>3. Accessibility Toolkit — Browser Extensions</h2>
+    <p><strong>GitHub:</strong></p>
+    <ul>
+        <li><a href="https://github.com/mihirdeshus/Custom-Font-Change" target="_blank">Custom Font Changer</a></li>
+        <li><a href="https://github.com/mihirdeshus/Color-Blindness-Filter" target="_blank">Color Blindness Filter</a></li>
+    </ul>
+
+    <p>
+        This project is a two-part accessibility toolkit consisting of lightweight browser extensions designed to improve usability of the web for individuals with visual impairments and reading difficulties.
+    </p>
+
+    <p>
+        The Color Blindness Filter applies real-time color transformations using JavaScript and CSS filters, while the Custom Font Type & Size Changer enables dynamic typography adjustments on any live webpage.
+    </p>
+
+    <p>
+        I built both tools independently with a focus on performance, universality, and zero-friction usability. They work seamlessly across arbitrary websites with minimal overhead and no setup required.
+    </p>
+
+    <p>
+        The project advanced to the finals of the Empower Hackathon at IIM Ahmedabad (March 2025).
+    </p>
 </div>
 
 </body>
